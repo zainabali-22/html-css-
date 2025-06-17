@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sorry To My Best Friend</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Material+Icons" rel="stylesheet" />
+<style>
+  /* Reset & base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #7f7fd5, #86a8e7, #91eae4);
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  /* Header */
+  header {
+    height: 64px;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(20px);
+    background: rgba(255 255 255 / 0.2);
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    color: #3b3054;
+    font-weight: 600;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    z-index: 100;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .material-icons {
+    font-size: 32px;
+    color: #6c63ff;
+  }
+  /* Layout */
+  main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 32px auto;
+    padding: 0 16px;
+  }
+  .card {
+    backdrop-filter: blur(30px);
+    background: rgba(255 255 255 / 0.15);
+    border-radius: 16px;
+    padding: 32px 40px;
+    box-shadow:
+      0 8px 32px rgb(124 119 255 / 0.25),
+      inset 0 0 0 1px rgb(195 191 255 / 0.35);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    color: #2c2a4a;
+    user-select: none;
+  }
+  main h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: #5947ff;
+    margin: 0;
+    line-height: 1.1;
+  }
+  main p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0;
+    color: #4a4a6a;
+  }
+  .heart-icon {
+    font-size: 48px;
+    color: #e63946;
+    animation: pulse 2s infinite ease-in-out;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.15); opacity: 0.75; }
+  }
+  /* Footer */
+  footer {
+    padding: 16px 24px;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #444470;
+    backdrop-filter: blur(15px);
+    background: rgba(255 255 255 / 0.12);
+    user-select: none;
+  }
+  /* Responsive */
+  @media (max-width: 480px) {
+    main {
+      margin: 24px 12px;
+      padding: 0 12px;
+    }
+    .card {
+      padding: 24px;
+    }
+    main h1 {
+      font-size: 2rem;
+    }
+    main p {
+      font-size: 1rem;
+      max-width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <span class="material-icons" aria-hidden="true">sentiment_very_satisfied</span>
+    Sorry to My Best Friend
+  </div>
+</header>
+<main>
+  <section class="card" role="article" aria-label="Apology message to best friend">
+    <span class="material-icons heart-icon" aria-hidden="true">favorite</span>
+    <h1>I'm Truly Sorry, My Dear Friend</h1>
+    <p>
+      Sometimes words fall short, but my heart is full of regret and hope.
+      I cherish our friendship deeply and regret that I've hurt you.
+      Please forgive me and let's make beautiful memories again.
+    </p>
+    <p style="font-style: italic; color: #6b5b95;">
+      "A true friend sees through the mistakes and loves the soul beneath."
+    </p>
+  </section>
+  <section class="card" role="article" aria-label="Friendly encouragement message">
+    <span class="material-icons" aria-hidden="true" style="color:#ffb703;">light_mode</span>
+    <h1>Forever Friends, Always</h1>
+    <p>
+      Life brings ups and downs, but our bond is stronger than any storm.
+      Together we laugh, we cry, we grow.
+      You mean the world to me—let's continue this beautiful journey side by side.
+    </p>
+  </section>
+  <section class="card" role="article" aria-label="Friendship thank you message">
+    <span class="material-icons" aria-hidden="true" style="color:#219ebc;">emoji_emotions</span>
+    <h1>Thank You For Being You</h1>
+    <p>
+      Your kindness, understanding, and presence light my life every day.
+      Thank you for being my rock, my joy, and my best friend.
+      I am so grateful for you.
+    </p>
+  </section>
+</main>
+<footer>
+  Made with sincerity and love | Designed for best friends everywhere
+</footer>
+<script>
+  // Accessibility: Focus visible outline for keyboard users
+  document.body.addEventListener('keydown', e => {
+    document.body.classList.add('user-is-tabbing');
+  });
+  document.body.addEventListener('mousedown', e => {
+    document.body.classList.remove('user-is-tabbing');
+  });
+</script>
+</body>
+</html>
+
